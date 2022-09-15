@@ -63,3 +63,7 @@ const playerDetails = async (name) => {
                 </div>
     `;
 }
+
+const preLoader = () => {
+    document.getElementById('preloader').style.display = 'none';
+}

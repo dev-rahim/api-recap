@@ -10,13 +10,25 @@
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
+    <style>
+        #preloader {
+            background: rgb(255, 255, 255) url("images/Rocket.gif") no-repeat fixed center;
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            opacity: 50%;
+            z-index: 9999;
+        }
+    </style>
 </head>
 
-<body>
+<body onload="preLoader()">
+    <!-- PRELOADER  -->
+    <div id="preloader">
+    </div>
     <header>
         <!-- place navbar here -->
-        <h1 class="text-center m-3 text-success">Welcome to Sports DB</h1>
+        <h1 class="text-center mb-3 pt-2 text-success">Welcome to Sports DB</h1>
         <div id="searchBox" class="w-50 mx-auto">
             <div class="form-inline d-flex">
                 <input id="searchInput" class="form-control mx-2" type="search" placeholder="Search player by name"
