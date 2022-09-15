@@ -16,12 +16,15 @@
 <body>
     <header>
         <!-- place navbar here -->
-        <h1 class="text-center m-3 text-danger">Welcome to Sports DB</h1>
+        <h1 class="text-center m-3 text-success">Welcome to Sports DB</h1>
         <div id="searchBox" class="w-50 mx-auto">
-            <form class="form-inline d-flex">
-                <input class="form-control mx-2" type="search" placeholder="Search player by name" aria-label="Search">
-                <button class="btn btn-outline-success my-sm-0" type="submit">Search</button>
-            </form>
+            <div class="form-inline d-flex">
+                <input id="searchInput" class="form-control mx-2" type="search" placeholder="Search player by name"
+                    aria-label="Search">
+                <button id="search-btn" onclick="loadData()" class="btn btn-outline-success my-sm-0">Search</button>
+            </div>
+        </div>
+        <div id="playerDetails" class="w-50 mx-auto">
         </div>
     </header>
     <main>
