@@ -33,14 +33,16 @@ const getPlayers = (data) => {
         const div = document.createElement('div');
         div.classList.add('card-group');
         div.innerHTML = `
-                <div onclick="playerDetails('${element.strPlayer}')" class="card m-3">
-                    <img class="card-img-top" src="${element.strThumb}" alt="image not found">
-                    <div class="card-body">
-                        <h5 class="card-title">${element.strPlayer}</h5>
-                        <h6><strong>${element.strNationality}</strong></h6>
-                        <p class="card-text">${element.strDescriptionEN.slice(0, 150)}</p>
-                    </div>
+        <a class="nav-link" href="#playerDetails">
+            <div onclick="playerDetails('${element.strPlayer}')" class="card m-3">
+                <img class="card-img-top" src="${element.strThumb}" alt="image not found">
+                <div class="card-body">
+                    <h5 class="card-title">${element.strPlayer}</h5>
+                    <h6><strong>${element.strNationality}</strong></h6>
+                    <p class="card-text">${element.strDescriptionEN.slice(0, 150)}</p>
                 </div>
+            </div>
+        </a>
         `;
         searchResult.appendChild(div);
     });
